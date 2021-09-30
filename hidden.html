@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+    <h1>Hidden things by Gopi Krishna</h1>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="secret">Enter the secret word</label>
+    <input type ="password" id="secret" name="secret" min=10 max=50 step=2 value='secret'> <br>
+
+    <label for="Guess">Enter a guess </label>
+    <input type ="text" id="Guess" name="Guess" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+    var correct=0;
+    var wrong=0;
+    
+function processGuess() {
+    secret=document.getElementById("secret").value
+    
+        
+    Guess=document.getElementById("Guess").value
+    if (secret==Guess){
+        correct++
+        alert("Congratulations")
+    }
+    else{
+        wrong++
+        alert("Sorry")
+    }
+    result=document.getElementById("result").innerHTML="This is correct : "+correct+" This is wrong : "+wrong
+}
+</script>
+
+
+</body>
+</html> 
