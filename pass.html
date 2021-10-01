@@ -2,18 +2,19 @@
 <html>
  
 <body>
-    <h1>Hidden things by Gopi Krishna</h1>
+    <h1>Pass phraseby Gopi Krishna</h1>
 
 <h2>Getting input</h2>
 
 <form>
-    <label for="secret">Enter the secret word</label>
-    <input type ="password" id="secret" name="secret" min=10 max=50 step=2 value='secret'> <br>
+    <label for="Let me in">Enter the secret phrase</label>
+    <input type ="password" id="Let me in" name="Let me in" min=10 max=50 step=2 value="Let me in"> <br>
+    
 
-    <label for="Guess">Enter a guess </label>
+    <label for="Guess">Enter a phrase </label>
     <input type ="text" id="Guess" name="Guess" autofocus> <br>
 
-    <input type="button" onclick="processGuess()" value="Check the guess">
+    <input type="button" onclick="processPhrase()" value="Check the phrase">
 </form>
 
 
@@ -23,22 +24,23 @@
     var correct=0;
     var wrong=0;
     
-function processGuess() {
-    secret=document.getElementById("secret").value
+function processPhrase() {
+    secret=document.getElementById("Let me in").value
     
         
     Guess=document.getElementById("Guess").value
     if (secret==Guess){
         correct++
-        alert("Congratulations")
+        alert("Access allowed")
     }
     else{
         wrong++
-        alert("Sorry")
+        alert("Access denied")
     }
     result=document.getElementById("result").innerHTML="This is correct : "+correct+" This is wrong : "+wrong
 }
 </script>
+
 
 
 </body>
