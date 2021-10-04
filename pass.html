@@ -39,7 +39,40 @@ function processPhrase() {
     }
     result=document.getElementById("result").innerHTML="This is correct : "+correct+" This is wrong : "+wrong
 }
+
 </script>
+<br>
+<div class="container" >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpO4vEbKSVk1wP8P4qGm7024JUF87QHP6_eA&usqp=CAU" height="200" width="200" onclick="newImage()" id="image">
+    <script>
+        var usingImage=1;
+          function newImage(){
+            
+              switch (usingImage) {
+                  case 1:
+                     document.getElementById("image").src="images/horse.jpg";
+                      usingImage=2;
+                      break;
+                  case 2:
+                  document.getElementById("image").src="images/dragon.png";
+                      usingImage=3;
+                      break;
+                  case 3:
+                  document.getElementById("image").src="images/giraffe.png";
+                      usingImage=4;
+                      break;
+                  default :
+                  document.getElementById("image").src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpO4vEbKSVk1wP8P4qGm7024JUF87QHP6_eA&usqp=CAU"
+                  usingImage=1;
+                  break;
+              }
+      
+          }
+      </script>
+</div>
+
+
+  
 
 
 
