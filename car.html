@@ -2,7 +2,7 @@
 <html>
  
 <body>
-<h1>Gopi Krishna ordersa car</h1>
+<h1>Gopi Krishna orders a car</h1>
 <h2>Getting input</h2>
 
 <form>
@@ -49,6 +49,27 @@
       out=document.getElementById("result").innerHTML="Car Ordered is : "+JSON.stringify(my_car)
   }
   </script>
+  <br>
+  <form>
+    <label for="property">Enter a property</label>
+    <input type ="text" id="property" name="property" min=10 max=50 step=2 value="color"> <br>
+
+    <label for="value">Enter a value</label>
+    <input type ="text" id="value" name="value" autofocus> <br>
+
+    <input type="button" onclick="updateCar()" value="Update the car">
+</form>
+
+
+<p id="res">This text will be replaced </p>
+<script>
+    function updateCar() {
+        propert=document.getElementById("property").value
+        val=document.getElementById("value").value
+        my_car[propert]=val
+        output=document.getElementById("res").innerHTML=JSON.stringify(my_car)
+    }
+</script>
 
 </body>
 </html> 
