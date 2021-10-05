@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+<h1>Gopi Krishna computers</h1>
+
+<h2>Getting input</h2>
+
+<form>
+    <label for="base">Enter a base</label>
+    <input type="number" id="base" name="base" value=10><br>
+
+    <label for="exponent">Enter an exponent</label>
+    <input type="number" id="exponent" name="exponent" value=2><br>
+
+    <input type="button" onclick="powers()" value="Compute">
+</form>
+
+<p id="res">This text will be replaced </p>
+
+<script> 
+
+function powers(){
+    base=document.getElementById("base").value
+    exponent=document.getElementById("exponent").value
+    let result="";
+    for (let index = 1; index <= exponent;index++) {
+       
+       result += Math.pow(base,index) + " "
+          }
+    out=document.getElementById("res").innerHTML="Powers of "+base+" are : "+result
+   
+}
+
+</script>
+
+
+</body>
+</html> 
