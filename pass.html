@@ -64,6 +64,7 @@ function processPhrase() {
     
         
     Guess=document.getElementById("Guess").value
+    if(wrong<3){
     if (secret==Guess){
         correct++
         alert("Access allowed")
@@ -73,8 +74,13 @@ function processPhrase() {
         alert("Access denied")
     }
     result=document.getElementById("result").innerHTML="This is correct : "+correct+" This is wrong : "+wrong
+    }else{
+        denied();
+    }
 }
-
+function denied(){
+    alert("account Locked")
+}
 </script>
 <br>
 <div class="container" >
